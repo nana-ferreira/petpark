@@ -1,0 +1,96 @@
+@import url('./css/cabecalho.css');
+@import url('./css/banner.css');
+@import url('./css/servicos.css');
+@import url('./css/planos.css');
+@import url('./css/ofertas.css');
+@import url('./css/parceiros.css');
+@import url('./css/newsletter.css');
+@import url('./css/rodape.css');
+
+:root {
+
+    /* cores */
+    --cor-neutra-dark: #444444;
+    --cor-neutra-medio: #B9B9B9;
+    --cor-neutra-light: #ffffff;
+
+    --cor-primaria-dark: #C13724;
+    --cor-primaria-medio: #EE6451;
+
+    --cor-secundaria-medio: #F5E6D6;
+    --cor-secundaria-light: #FFF5EB;
+
+    --cor-terciaria-dark: #A2B72B;
+    --cor-terciaria-medio: #CBDA74;
+    --cor-terciaria-light: #EFF2E1;
+
+    --cor-primaria-box-shadow: rgba(193, 55, 36, 0.4);
+    --cor-secundaria-box-shadow: rgba(162, 183, 43, 0.4);
+
+    /* Tipografia */
+    --fonte-titulo: 'Sigmar', sans-serif;
+    --fonte-texto: 'Poppins', sans-serif;
+
+    /* Tamanhos de fonte */
+    --font-size-s: 0.8rem;
+    --font-size-m: 1rem;
+    --font-size-l: 1.25rem;
+
+    --font-size-h5: 1.56rem;
+    --font-size-h4: 1.94rem;
+    --font-size-h3: 2.44rem;
+    --font-size-h2: 2.64rem;
+    --font-size-h1: 4.5rem; 
+
+    /* Altura das linhas */
+    --line-height: 120%; 
+
+    /* Espaçamentosw */
+    --padding-xs: 0.25rem;
+    --padding-s: 0.5rem;
+    --padding-m: 1rem;
+    --padding-l: 1.5rem;
+    --padding-xl: 2rem;
+    --padding-xxl: 2.5rem;
+    --padding-3xl: 3.75rem;
+    --padding-4xl: 4rem;
+    --padding-5xl: 4.75rem;
+
+    --gap-xs: 0.25rem;
+    --gap-s: 0.5rem;
+    --gap-m: 1rem;
+    --gap-l: 1.5rem;
+    --gap-xl: 2rem;
+    --gap-xxl: 2.5rem;
+    --gap-3xl: 5rem;
+    --gap-4xl: 6rem;
+
+
+    --max-width-block: 75rem;
+
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5 {
+    font-family: var(--fonte-titulo); 
+    line-height: var(--line-height);       
+}
+
+body {
+    font-family: var(--fonte-texto);
+    font-size: var(--font-size-m);
+    color: var(--cor-neutra-dark);
+    width: 100vw;
+    background-color: var(--cor-neutra-light);
+}
+
+.container {
+    width: 100%;
+    max-width: var(--max-width-block);
+    margin: 0 auto;
+}

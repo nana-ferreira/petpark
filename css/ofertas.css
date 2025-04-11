@@ -1,0 +1,79 @@
+.ofertas {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: var(--gap-xl);
+    width: 100%;
+    background-color: var(--cor-secundaria-medio);
+    padding: var(--padding-5xl) 0;
+}
+
+.ofertas__titulo {
+    font-size: var(--font-size-h3);
+    color: var(--cor-primaria-medio);
+}
+
+.ofertas__lista {
+    display: flex;
+    gap: var(--gap-xl);
+    position: relative;
+    overflow: hidden;
+}
+
+.ofertas__lista-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: var(--gap-m);
+    background-color: var(--cor-neutra-light);
+    border-radius: 1rem;
+    text-align: center;
+    padding: var(--padding-m);
+}
+
+.ofertas__lista-titulo, .ofertas__lista-preco {
+    font-family: var(--fonte-texto);
+    font-size: var(--font-size-h5);
+    font-weight: 600;
+}
+
+.ofertas__lista-nav {
+    position: absolute;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    top: 45%;
+
+}
+
+.lista-button {
+    width: 48px;
+    height: 48px;
+    border: none;
+    border-radius: 50%;
+    padding: var(--padding-s);
+    background-color: var(--cor-primaria-medio);
+    color: var(--cor-neutra-light);
+    font-size: var(--font-size-h4);
+}
+
+@media screen and (max-width: 1200px) {
+
+    .ofertas {
+        padding: var(--padding-xxl) var(--padding-3xl);
+    }
+}
+
+@media screen and (max-width: 620px) {
+
+    .ofertas {
+        padding: var(--padding-xxl) var(--padding-l);
+    }
+
+    .ofertas__titulo {
+        font-size: var(--font-size-h4);
+    }
+}

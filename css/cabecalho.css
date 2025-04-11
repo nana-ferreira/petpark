@@ -1,0 +1,154 @@
+.cabecalho {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--gap-xxl);
+    padding: var(--gap-xxl) 0;
+}
+
+.cabecalho__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.nav__list {
+    display: none;
+}
+
+.label-busca {
+    width: 60%;
+    height: 40px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.label-busca input {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border: 1px solid var(--cor-neutra-dark);
+    border-radius: 2rem;
+    padding-left: var(--padding-m);
+}
+
+.label-busca input:focus {
+    border: 1px solid var(--cor-primaria-dark);
+    outline: none;
+}
+
+.label-busca img {
+    position: absolute;
+    right: 10px;
+    cursor: pointer;
+    width: 20px;
+    height: 20px;
+}
+
+.botao-login {
+    background-color: transparent;
+    border: none;
+    display: flex;
+    align-items: center;
+    gap: var(--gap-s);
+    cursor: pointer;
+}
+
+.navegacao {
+    align-content: center;
+}
+
+.menu-lista {
+    display: flex;
+    justify-content: space-between;
+}
+
+.menu-link {
+    text-decoration: none;
+    color: var(--cor-neutra-dark);
+    position: relative;
+
+    &::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 0;
+        height: 2px;
+        background-color: var(--cor-neutra-dark);
+        transition: width 0.3s ease;
+    }
+}
+
+.menu-link:hover::after, .menu-link:focus::after {
+    width: 100%;
+}
+
+@media screen and (max-width: 1200px) {
+
+    .cabecalho {
+        padding: var(--padding-xl) 8%;
+    }
+
+    .cabecalho__container{
+        row-gap: var(--gap-l);
+    }
+
+    .label-busca {
+        flex: 1 1 100%;
+        text-align: center;
+        order: 3;
+    }
+}
+
+@media screen and (max-width: 620px) {
+
+    .cabecalho {
+        padding: var(--padding-xl) 7%;
+        width: 100%;
+    }
+
+    .cabecalho__container {
+        display: grid;
+        grid-template-areas: 
+        "logo logo"
+        "menu login"
+        "busca busca";
+        grid-template-columns: 0.5fr 1fr;
+    }
+
+    .cabecalho__container>img {
+        grid-area: logo;
+        justify-self: center;
+    }
+
+    .nav__list {
+      display: block;
+      grid-area: menu;
+    }
+
+    .menu__toggle__icon {
+        border: none;
+        background-color: transparent;
+    }
+
+    .label-busca {
+        grid-area: busca;
+        width: 100%;
+    }
+
+    .botao-login {
+        grid-area: login;
+        font-size: var(--font-size-l);
+        justify-self: end;
+    }
+
+    .menu-lista {
+        display: none;
+    }
+}
+  
+

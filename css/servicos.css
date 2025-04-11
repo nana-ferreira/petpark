@@ -1,0 +1,94 @@
+.servicos {
+    width: 100%;
+    padding: var(--padding-5xl) 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: var(--gap-3xl);
+}
+
+.servicos__titulo {
+    font-size: var(--font-size-h3);
+    color: var(--cor-primaria-medio);
+}
+
+.servicos__lista {
+    display: flex;
+    gap: var(--gap-m);
+}
+
+.servicos__lista>li>.link {
+    position: relative;
+    background-color: var(--cor-secundaria-medio);
+    padding: var(--padding-l) var(--padding-m);
+    border-radius: 1rem;
+    font-family: var(--fonte-titulo);
+    font-size: var(--font-size-h5);
+    color: var(--cor-primaria-medio);
+    text-decoration: none;
+}
+
+.link::before {
+    content: "";
+    position: absolute;
+    left: -10px;
+    bottom: 50%;
+    width: 50px;
+    height: 50px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    transform: scale(0);
+    transition: transform 0.3s ease, left 0.3s ease;
+}
+
+.banho-e-tosa>.link::before {
+    background-image: url("../assets/icones/banho-e-tosa.png");
+}
+
+.hospedagem>.link::before {
+    background-image: url("../assets/icones/hospedagem.png");
+}
+
+.veterinario>.link::before {
+    background-image: url("../assets/icones/veterinario.png");
+}
+
+.adestramento>.link::before {
+    background-image: url("../assets/icones/adestramento.png");
+}
+
+.petsitter>.link::before {
+    background-image: url("../assets/icones/petsitter.png");
+}
+
+.servicos__lista>li>.link:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease-in;
+    padding-left: var(--padding-4xl);
+}
+
+.link:hover::before {
+    transform: scale(1) translateY(50%);
+    left: 0.5rem;
+}
+
+@media screen and (max-width: 1200px) {
+
+    .servicos {
+        padding: var(--padding-xxl) var(--padding-3xl);
+    }
+
+    .servicos__lista {
+        flex-wrap: wrap;
+        justify-content: center;
+        row-gap: var(--gap-3xl);
+    }
+}
+
+@media screen and (max-width: 620px) {
+
+    .servicos {
+        padding: var(--padding-xxl) var(--padding-xxl);
+    }
+}

@@ -1,0 +1,132 @@
+.newsletter {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: var(--padding-5xl) 0;
+    background-color: var(--cor-secundaria-medio);
+}
+
+.newsletter > h2 {
+    font-size: var(--font-size-h3);
+    color: var(--cor-primaria-medio);
+    margin-bottom: var(--gap-xl);
+}
+
+.newsletter > p {
+    margin-bottom: var(--gap-l);
+    font-size: var(--font-size-l);
+    line-height: var(--line-height);
+}
+
+.formulario {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: var(--gap-l);
+}
+
+.formulario-input {
+    padding: var(--padding-m) var(--padding-l);
+    border: 1px solid var(--cor-neutra-dark);
+    border-radius: 2rem;
+    background-color: transparent;
+    width: 14.5vw;
+}
+
+.formulario-input:focus {
+    border: 1px solid var(--cor-primaria-dark);
+    outline: none;
+}
+
+.formulario-input:user-valid {
+    border: 2px solid var(--cor-terciaria-dark);
+}
+
+.botao-enviar {
+    width: 143px;
+    height: 46px;
+    padding: var(--padding-s) var(--padding-l);
+    border: none;
+    border-radius: 2rem;
+    background-color: var(--cor-primaria-medio);
+    font-size: var(--font-size-l);
+    font-weight: 600;
+    color: var(--cor-neutra-light);
+    cursor: pointer;
+}
+
+.grupo-opcoes {
+    display: flex;
+    align-items: center;
+    gap: var(--gap-m);
+    flex-wrap: wrap;
+}
+
+.opcao {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    position: relative;
+    padding-left: var(--padding-l);
+}
+
+.opcao input[type="checkbox"] {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.opcao input[type="checkbox"] + span {
+    position: absolute;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    border-radius: 0.25rem;
+    border: 1px solid var(--cor-neutra-dark);
+    background-color: transparent;
+}
+
+.opcao input[type="checkbox"]:checked + span {
+    box-shadow: inset 0 0 1px 2px var(--cor-secundaria-medio);
+    background-color: var(--cor-primaria-medio);
+}
+
+@media screen and (max-width: 1200px) {
+
+    .newsletter {
+        padding: var(--padding-xxl) var(--padding-3xl);
+    }
+    .formulario {
+        padding: 0 5rem;
+    }
+
+    .formulario-input {
+        width: 36.5vw;
+    }
+}
+
+@media screen and (max-width: 620px) {
+
+    .newsletter {
+        padding: var(--padding-xxl) var(--padding-l);
+    }
+
+    .newsletter > h2 {
+        text-align: center;
+        font-size: var(--font-size-h4);
+    }
+
+    .newsletter > p {
+        text-align: center;
+    }
+
+    .formulario {
+        padding: 0;
+    }
+
+    .formulario-input {
+        width: 90vw;
+    }
+}
